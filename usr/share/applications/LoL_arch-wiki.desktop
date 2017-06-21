@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Lol from arch.wiki
+Comment=LoL made from arch.wiki
+Exec=WINEARCH=win32 WINEPREFIX=~/games/lol-from-a_wiki wine '/home/personal/games/lol-from-a_wiki/LeagueOfLegends/LeagueClient.exe'
+Terminal=false
+Type=Application
+Icon=/media/Archive/games/LeagueOfLegends/icon.png
+Categories=Wine;Game;
