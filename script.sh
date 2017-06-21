@@ -1,5 +1,4 @@
 export WINEARCH=win32 WINEPREFIX=~/games/lol-from-a_wiki
-winecfg     #CHECK IF THIS IS NEEDED. winecfg is needed to trigger installation of mono and gecko. 
 sudo pacman -S --needed --noconfirm lib32-alsa-lib lib32-alsa-plugins lib32-libpulse lib32-libldap lib32-lcms2 lib32-gnutls  
 winetricks d3dx9 vcrun2005 wininet corefonts
 ln -s /media/Archive/games/LeagueOfLegends/ $WINEPREFIX
