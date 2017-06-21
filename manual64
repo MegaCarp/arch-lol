@@ -1,0 +1,2 @@
+export WINEPREFIX=~/lol-straight64
+winetricks vcrun2015 d3dx9
