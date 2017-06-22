@@ -13,5 +13,3 @@ echo 'make msvcp140 (Native, then builtin)
 wine $WINEPREFIX/LeagueOfLegends/LeagueClient.exe
 
 unset -v WINEARCH WINEPREFIX
-
-
