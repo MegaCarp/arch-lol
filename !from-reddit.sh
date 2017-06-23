@@ -13,3 +13,16 @@ echo 'make msvcp140 (Native, then builtin)
 wine $WINEPREFIX/LeagueOfLegends/LeagueClient.exe
 
 unset -v WINEARCH WINEPREFIX
+
+sudo bash -c "cat <<EOF > /usr/share/applications/lol.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name=League of Legends                                 # name of an app.
+Comment=Moba from Riot                # comment which appears as a tooltip.
+Exec=WINEARCH=win32 WINEPREFIX=/home/personal/games/lol_from-reddit/ wine /home/personal/games/lol_from-reddit/LeagueOfLegends/LeagueClient.exe  # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon=/home/personal/games/LeagueOfLegends/icon.png   # location of icon file.
+Type=Application                                # type.
+Categories=Games;Wine;        # categories in which this app should be listed.
+EOF"
