@@ -21,7 +21,7 @@ Exec=WINEARCH=win32 WINEPREFIX=~/games/lol-BEST wine /home/poriha/games/lol-BEST
 Terminal=false
 Icon=/home/poriha/games/backup_games/League\ of\ Legends/icon.png
 Type=Application
-Categories=Games;Wine;' | sudo tee ~/.local/share/applications
+Categories=Games;Wine;' > ~/.local/share/applications/lol.desktop
 
 sudo bash -c "cat <<EOF > /usr/share/applications/kill-lol.desktop
 [Desktop Entry]
