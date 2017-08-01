@@ -12,18 +12,16 @@ winecfg
 wine $WINEPREFIX/League\ of\ Legends/LeagueClient.exe
 unset -v WINEARCH WINEPREFIX
 
-sudo bash -c "cat <<EOF > /usr/share/applications/lol.desktop
-[Desktop Entry]
+echo '[Desktop Entry]
 Encoding=UTF-8
 Version=1.0                                     # version of an app.
 Name=League of Legends                                 # name of an app.
 Comment=Moba from Riot                # comment which appears as a tooltip.
-Exec=WINEARCH=win32 WINEPREFIX=~/games/lol-from_reddit wine $WINEPREFIX/League\ of\ Legends/LeagueClient.exe
+Exec=WINEARCH=win32 WINEPREFIX=/home/user/games/lol-from_reddit wine $WINEPREFIX/League\ of\ Legends/LeagueClient.exe
 Terminal=false                                  # whether an app requires to be run in a terminal.
-Icon=~/games/backup_games/League\ of\ Legends/icon.png   # location of icon file.
+Icon=/home/user/games/backup_games/League\ of\ Legends/icon.png   # location of icon file.
 Type=Application                                # type.
-Categories=Games;Wine;        # categories in which this app should be listed.
-EOF"
+Categories=Games;Wine; ' | sudo tee /usr/share/applications/lol.desktop 
 
 sudo bash -c "cat <<EOF > /usr/share/applications/kill-lol.desktop
 [Desktop Entry]
