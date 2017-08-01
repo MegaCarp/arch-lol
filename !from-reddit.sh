@@ -24,3 +24,16 @@ Icon=~/games/backup_games/League\ of\ Legends/icon.png   # location of icon file
 Type=Application                                # type.
 Categories=Games;Wine;        # categories in which this app should be listed.
 EOF"
+
+sudo bash -c "cat <<EOF > /usr/share/applications/kill-lol.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name=Kill LoL                                 # name of an app.
+Comment=Stop LoL emulator process                # comment which appears as a tooltip.
+Exec=WINEARCH=win32 WINEPREFIX=~/games/lol-from_reddit wineserver -k  # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon=~/games/backup_games/League\ of\ Legends/kill-icon.png   # location of icon file.
+Type=Application                                # type.
+Categories=Games;Wine;        # categories in which this app should be listed.
+EOF"
